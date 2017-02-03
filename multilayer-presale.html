@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="./css/multilayer-presale.css" />
+	<script type="text/javascript" src="./jquery-1.7.min.js"></script>
+	<script type="text/javascript" src="./Sortable.js"></script><!--必须放在插件前面-->
+	<script type="text/javascript" src="./js/multilayer-presale.js"></script>
+
+</head>
+<body>
+	<form action="" id="treeForm" submit="return false;" methode="post">
+		<input name="result" id="result" type="text"/>
+		<div class="" id="multilayer" style="width:500px;height:500px">
+		</div>
+		
+		
+		
+		
+		
+	</form>
+	<!-- 
+		[{"name":"测试1","name_en":"test","audience_id":"22b1ss","children":[{"name":"中文","audience_id":"66a1"},
+										{"name":"节假日","audience_id":"22b12","children":[
+												{"name":"圣诞节","audience_id":"66a11"},
+												{"name":"中国节","audience_id":"22b21","children":[					{"name":"春节","audience_id":"66a111"},					{"name":"国庆节","audience_id":"22b1","children":[				{"name":"中秋节","audience_id":"66a1111"},				
+														{"name":"建军节","audience_id":"66a1112"}
+														]
+													}
+												]
+											},
+												{"name":"偏避的","audience_id":"66a13"},
+												{"name":"没听过的","audience_id":"66a14"}
+											]
+										},
+										{"name":"汽车","audience_id":"66a3"}
+										]
+					},
+					{"name":"测试2","audience_id":"22c1","children":[{"name":"保险","audience_id":"66b1"},
+											{"name":"大洋保险","audience_id":"2221","children":[
+																	{"name":"人参保险","audience_id":"66b111"},
+																	{"name":"汽车保险","audience_id":"66b112"}
+																   ]
+											},
+										]
+					},
+					{"name":"测试3","audience_id":"22d1","children":[
+								{"name":"投资","audience_id":"66c1"},
+								{"name":"理财","audience_id":"66c2"}
+								]
+					},
+					{"name":"测试4","audience_id":"22bss1"}
+		   ]
+	-->
+	<script type="text/javascript">
+        var multi = new multilayer_presale({
+		  container : $("#multilayer"),
+		  // lang : 'EN',
+		  lang : "CN", //"CN" "EN"
+		  values : [{"name":"高档汽车","name_en":"High-End Cars","audience_id":1194,"parent_id":0,"children":[]},{"name":"中档汽车","name_en":"Mid-range Cars naaaaaaaaaa2123123123123aaaa","audience_id":1195,"parent_id":0,"children":[]},{"name":"入门级汽车","name_en":"Economy Cars","audience_id":1204,"parent_id":0,"children":[]},{"name":"二手车","name_en":"Used Cars","audience_id":1197,"parent_id":0,"children":[]},{"name":"汽车租赁","name_en":"Rental Cars","audience_id":1198,"parent_id":0,"children":[]},{"name":"豪华汽车","name_en":"Luxury Cars","audience_id":1199,"parent_id":0,"children":[]},{"name":"汽车保险","name_en":"Auto Insurance","audience_id":1200,"parent_id":0,"children":[]},{"name":"日本韩国车","name_en":"Japan & Korea (Car)","audience_id":1201,"parent_id":0,"children":[]},{"name":"德国车","name_en":"Germany (Car)","audience_id":1202,"parent_id":0,"children":[]},{"name":"美国车","name_en":"United States (Car)","audience_id":1203,"parent_id":0,"children":[]},{"name":"国产车","name_en":"China (Car)","audience_id":1205,"parent_id":0,"children":[]},{"name":"三厢车","name_en":"Sedan","audience_id":1206,"parent_id":0,"children":[]},{"name":"轿跑车","name_en":"Coupe","audience_id":1207,"parent_id":0,"children":[]},{"name":"两厢车","name_en":"Hatchback","audience_id":1208,"parent_id":0,"children":[]},{"name":"越野车","name_en":"SUV","audience_id":1210,"parent_id":0,"children":[]},{"name":"面包车","name_en":"Van","audience_id":1211,"parent_id":0,"children":[]},{"name":"旅行车","name_en":"Station Wagon","audience_id":1212,"parent_id":0,"children":[]},{"name":"敞篷车","name_en":"Convertible","audience_id":1214,"parent_id":0,"children":[]},{"name":"多功能车","name_en":"MPV","audience_id":1215,"parent_id":0,"children":[]},{"name":"跑车","name_en":"Sports Car","audience_id":1216,"parent_id":0,"children":[]},{"name":"护肤","name_en":"Skin Care","audience_id":1217,"parent_id":0,"children":[{"name":"抗衰老去皱","name_en":"Anti-aging / Wrinkles","audience_id":1218,"parent_id":1217},{"name":"补水保湿","name_en":"Hydration","audience_id":1219,"parent_id":1217},{"name":"美白提亮祛斑","name_en":"Brightening & Whitening","audience_id":1220,"parent_id":1217},{"name":"隔离防晒","name_en":"Sunscreen","audience_id":1221,"parent_id":1217},{"name":"清洁卸妆","name_en":"Cleansing & Makeup Removal","audience_id":1222,"parent_id":1217},{"name":"男士护肤","name_en":"Men's Skincare","audience_id":1223,"parent_id":1217},{"name":"祛痘","name_en":"Acne Removing","audience_id":1224,"parent_id":1217},{"name":"抗过敏","name_en":"Anti-allergy","audience_id":1225,"parent_id":1217},{"name":"眼部护理","name_en":"Eyecare","audience_id":1226,"parent_id":1217},{"name":"身体护肤","name_en":"Bodycare","audience_id":1227,"parent_id":1217}]}],
+		   // selected:["1218","1219","1220","1221","1222","1223","1224","1225","1226"],
+		  // ["66a1","66a11","66a111","66a1111","66a1112","66a13","66a14","66a3"],//
+		  	result:$("#result"),
+		  	callback:callBackFun
+
+		  
+		})
+		function callBackFun(ids){
+			console.log(ids);
+		}
+	</script>
+	
+</body>
+</html>
